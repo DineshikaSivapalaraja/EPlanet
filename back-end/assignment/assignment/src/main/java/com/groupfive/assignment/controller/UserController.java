@@ -1,9 +1,11 @@
 package com.groupfive.assignment.controller;
 
 
+import com.groupfive.assignment.dto.LoginRequest;
 import com.groupfive.assignment.model.User;
 import com.groupfive.assignment.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,4 +33,12 @@ public class UserController {
       userService.deleteUserById(id);
       return ResponseEntity.noContent().build();
   }
+
+    @PostMapping("/log-in")
+    public ResponseEntity<Void> login(@RequestBody LoginRequest loginRequest) {
+        if (userService.authenticate(loginRequest)) {
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+    }
 }
