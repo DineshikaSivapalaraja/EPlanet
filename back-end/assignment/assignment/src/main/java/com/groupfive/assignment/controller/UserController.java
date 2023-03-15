@@ -22,11 +22,24 @@ public class UserController {
        return  userService.getAllUser();
    }
 
-    @PostMapping("/user")
-    public ResponseEntity<User> save(@RequestBody  User user) {
-        User savedUser = userService.addUser(user);
-        return ResponseEntity.created(URI.create("/user/" + savedUser.getId()))
-                .body(savedUser);
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@RequestBody User user) {
+
+        if (userService.isUserAlreadyExists(user)) {
+            return new ResponseEntity<>("User with email " + user.getEmail() + " already exists", HttpStatus.BAD_REQUEST);
+        } else {
+            userService.register(user);
+            return new ResponseEntity<>("User registered successfully", HttpStatus.CREATED);
+        }
+    }
+
+    @PostMapping("/verify-otp")
+    public ResponseEntity<String> verifyOtp(@RequestParam String email, @RequestParam String otp) {
+        if (userService.verifyOtp(email, otp)) {
+            return ResponseEntity.ok("OTP verified successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid OTP");
+        }
     }
   @DeleteMapping("/user/{id}")
   public ResponseEntity<Void> deleteCustomerById(@PathVariable Long id) {

@@ -16,6 +16,17 @@ public class User {
     private String email;
     private Boolean status;
 
+    public String getOtp() {
+        return otp;
+    }
+
+    public void setOtp(String otp) {
+        this.otp = otp;
+    }
+
+    @Column(name = "otp", length = 6)
+    private String otp;
+
     public Long getId() {
         return id;
     }
