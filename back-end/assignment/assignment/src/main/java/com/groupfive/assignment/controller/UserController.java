@@ -2,6 +2,7 @@ package com.groupfive.assignment.controller;
 
 
 import com.groupfive.assignment.dto.LoginRequest;
+import com.groupfive.assignment.email.EmailService;
 import com.groupfive.assignment.model.User;
 import com.groupfive.assignment.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,8 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private EmailService mailService;
 
    @GetMapping("/user")
     public List<User> getAllUser(){
@@ -35,7 +38,7 @@ public class UserController {
 
     @PostMapping("/verify-otp")
     public ResponseEntity<String> verifyOtp(@RequestParam String email, @RequestParam String otp) {
-        if (userService.verifyOtp(email, otp)) {
+        if (mailService.verifyOtp(email, otp)) {
             return ResponseEntity.ok("OTP verified successfully");
         } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid OTP");
