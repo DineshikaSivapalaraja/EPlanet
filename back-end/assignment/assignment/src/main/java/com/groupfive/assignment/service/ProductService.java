@@ -34,4 +34,8 @@ public class ProductService {
         return false;
     }
 
+    public List<Product> searchProducts(String query) {
+        return productRepo.findByNameContainingIgnoreCase(query);
+    }
+
 }
