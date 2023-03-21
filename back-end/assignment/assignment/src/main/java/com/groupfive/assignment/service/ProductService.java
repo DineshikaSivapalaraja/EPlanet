@@ -15,13 +15,14 @@ public class ProductService {
 
     public List<Product> getAllProducts() {
         return productRepo.findAll();
+
     }
 
     public Product getProductById(Long id) {
         return productRepo.findById(id).orElse(null);
     }
 
-    public Product addProduct(Product product) {
+    public Product saveProduct(Product product) {
         return productRepo.save(product);
     }
 
