@@ -14,6 +14,29 @@ public class Product {
     private String image_url;
     @Column(nullable = false)
     private Double price;
+    @Column(nullable = false)
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
+
+    @Column(nullable = false)
+    private Boolean available;
+
+
 
     public String getCategory() {
         return category;
