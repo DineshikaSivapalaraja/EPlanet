@@ -13,7 +13,7 @@ body {
 }
 
 .background{
-    background-color: aqua;
+    background-color: rgb(48, 167, 167);
     padding: 50px 0;
 }
 
@@ -81,3 +81,81 @@ input, button {
 .boxShadow{
   box-shadow: rgb(43 52 69 /10%) 0 4px 16px;
 }
+
+/***************category*****************/
+.contentWidth {
+  width: 77%;
+}
+
+.category {
+  width: 22%;
+  box-shadow: rgba(193, 194, 194, 0.377) 0 4px 16px;
+  height: 25rem;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  
+}
+
+.category i {
+  width: 30px;
+  height: 30px;
+  margin-top: 13px;
+  object-fit: contain;
+}
+.category span {
+  margin: 10px 20px;
+  text-transform: capitalize;
+}
+
+.category .box {
+  transition: 0.5s;
+  padding: 0 20px;
+}
+
+.category .box:hover {
+  color: #8dfbfe;
+  background-color: #002628;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+/***************category*****************/
+
+.btn-primary {
+  background: #09bbc1;
+  padding: 13px 40px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;margin-left: 1rem;
+}
+
+.btn-primary:hover {
+  color: #aaf4f7;
+  background-color: #002628;
+  cursor: pointer;
+  padding: 13px 40px;
+  border-radius: 5px;
+}
+
+.top {
+  margin-top: 4rem;
+}
+.mtop {
+  margin-top: 40px;
+}
+.heading i {
+  color: #09bbc1;
+  margin: 10px;
+}
+/*.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e94560;
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+  margin: 10px;
+}
+*/
