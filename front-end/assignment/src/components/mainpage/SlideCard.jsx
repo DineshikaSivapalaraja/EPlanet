@@ -9,20 +9,20 @@ const SlideCard = () => {
             id: 1,
             title: "Discounts Up To 50% off",
             desc: "Explore our latest watch collection by selecting your favourite models, materials, bezels, dials and bracelets to find the watch that was made for you.",
-            cover: "https://content.rolex.com/dam/2022/upright-bba/m126900-0001.png?impolicy=v6-upright",
+            cover: "./images/Rolex2.png",
         },
        {
             id: 2,
             title: "50% off For Your First Shopping",
             desc: "ThunderBolt Electronics for all your Computer needs",
-            cover:"https://www.newreactionsound.com/wp-content/themes/Bootstrap/assets/images/box-speaker.png",
+            cover:"./images/box-speaker.png",
         },
          
         {
             id: 3,
             title: "50% off For Your First Shopping",
             desc: "ThunderBolt Electronics for all your Computer needs",
-            cover:"https://i.pinimg.com/originals/ca/fb/90/cafb9062f27390676aa00d68f7dd1104.png",
+            cover:"./images/desk-1.png",
         },
       
     ]
@@ -49,7 +49,7 @@ const SlideCard = () => {
                             <button className='btn-primary'>Visit Collections</button>
                         </div>
                         <div className='right'>
-                  <img src={value.cover} alt=''/>
+                  <img src={value.cover} alt='' className="slidepic"/>
                 </div>
                     </div>
                 )

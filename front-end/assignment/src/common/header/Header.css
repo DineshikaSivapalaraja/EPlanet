@@ -147,9 +147,10 @@ header ul li a:hover {
     height: 12vh;
     position: fixed;
     top: 0;
+    padding-bottom: 6rem;
     z-index: 1000;
     width: 100%;
-    background-color: rgb(217, 32, 32);
+    background-color: #002628;
     box-shadow: -1px 11px 24px -11px rgba(255, 247, 247, 0.2);
     transition: 0.5s;
 }
