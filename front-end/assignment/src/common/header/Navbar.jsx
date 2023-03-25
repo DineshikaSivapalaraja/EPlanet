@@ -20,6 +20,9 @@ const Navbar = ()=> {
                                     <Link to="/">Home</Link>
                                 </li>
                                 <li>
+                                    <Link to="/pages">Pages</Link>
+                                </li>
+                                <li>
                                     <Link to="/user">User Account</Link>
                                 </li>
                                 <li>
