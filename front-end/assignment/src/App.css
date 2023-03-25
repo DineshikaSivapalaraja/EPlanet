@@ -13,7 +13,7 @@ body {
 }
 
 .background{
-    background-color: aqua;
+    background-color: rgb(48, 167, 167);
     padding: 50px 0;
 }
 
@@ -81,3 +81,184 @@ input, button {
 .boxShadow{
   box-shadow: rgb(43 52 69 /10%) 0 4px 16px;
 }
+
+/***************category*****************/
+.contentWidth {
+  width: 77%;
+}
+
+.category {
+  width: 22%;
+  box-shadow: rgba(193, 194, 194, 0.377) 0 4px 16px;
+  height: 25rem;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  
+}
+
+.category i {
+  width: 30px;
+  height: 30px;
+  margin-top: 13px;
+  object-fit: contain;
+}
+.category span {
+  margin: 10px 20px;
+  text-transform: capitalize;
+}
+
+.category .box {
+  transition: 0.5s;
+  padding: 0 20px;
+}
+
+.category .box:hover {
+  color: #8dfbfe;
+  background-color: #002628;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+/***************category*****************/
+
+.btn-primary {
+  background: #09bbc1;
+  padding: 13px 40px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;margin-left: 1rem;
+}
+
+.btn-primary:hover {
+  color: #aaf4f7;
+  background-color: #002628;
+  cursor: pointer;
+  padding: 13px 40px;
+  border-radius: 5px;
+}
+
+.top {
+  margin-top: 4rem;
+}
+.mtop {
+  margin-top: 2rem;
+}
+.heading{
+  margin-left: 40rem;
+  
+}
+
+.heading i {
+  color: #09bbc1;
+  margin: 10px;
+}
+
+
+/**********flash deals***********/
+.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #047478;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+  margin: 20px;
+  font-weight: bold;
+}
+
+
+.plus{
+  width: 30px;
+  padding-left: 3px;
+}
+
+
+.flashpic {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.flash_background{
+  margin-top: 3rem;
+  
+}
+
+.next i, .prev i{
+ background-color: #021f20e8;
+ color: #fff;
+ padding: 0.7rem;
+ 
+}
+
+/****************product******************/
+
+
+.product {
+  background: #3f565771;
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  margin: 0.5rem;
+  height: 32rem;
+}
+
+.product h3 {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 18px;
+}
+.product .rate i {
+  font-size: 15px;
+  color: #ffcd4e;
+  margin: 5px 5px 5px 0;
+}
+.product .price {
+  display: flex;
+  justify-content: space-between;
+  color: #05c4ca;
+}
+.price button {
+  background: none;
+  color: #05c4ca;
+  font-size: 20px;
+  transition: 0.5s;
+  border: 1px solid rgba(5, 56, 35, 0.09);
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+.price button:hover {
+  cursor: pointer;
+  background-color: #047478;
+  color: #fff;
+}
+
+.product-like {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 0;
+  transition: 0.5s;
+  
+}
+.product-like .likeLable {
+  background-color: #047478;
+  padding: 1px 10px;
+  font-size: 12px;
+  color: white;
+  border-radius: 100px;
+}
+.product-like i {
+  font-size: 20px;
+  margin: 10px 3px;
+}
+.product:hover .product-like {
+  opacity: 1;
+}
+/*---------product-----------*/
