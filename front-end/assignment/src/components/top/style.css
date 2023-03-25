@@ -1,0 +1,49 @@
+.topCat {
+    position: relative;
+    
+}
+
+
+.topimg{
+    width: 30rem;
+    height: 10rem;
+   border-radius: 20px;
+}
+
+.topproduct{
+    
+    padding: 1rem 0.2rem;
+    position: relative;
+    border-radius: 8px;
+    
+    height: 12rem;
+   
+}
+
+.topCat .nametop {
+    position: relative;
+    width: 100%;
+    
+}
+
+.topCat .nametop span {
+    background: #047478;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    margin: 0.2rem 0.6rem;
+    position: absolute;
+    top: 0.1rem;
+}
+
+.topCat .nametop .tleft {
+    left: 0;
+  }
+  
+.topCat .nametop .tright {
+    background-color: aliceblue;
+    color: black;
+    position: absolute;
+    right: 0;
+  }

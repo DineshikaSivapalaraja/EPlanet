@@ -7,13 +7,13 @@
 }
 
 body {
-    background-color: rgb(58, 63, 63);
+    background-color: rgb(58, 63, 63); 
     color: #fff;
     font-family: 'Poppins', sans-serif;
 }
 
 .background{
-    background-color: rgb(48, 167, 167);
+    /*background-color: rgb(63, 75, 75); */
     padding: 50px 0;
 }
 
@@ -300,3 +300,33 @@ input, button {
   opacity: 1;
 }
 /*---------product-----------*/
+
+/*----- heading -------*/
+.topCat{
+  margin-top: 2rem;
+}
+
+.heading .heading-left i {
+  font-size: 30px;
+}
+.heading .heading-left h2 {
+  font-size: 25px;
+  margin: 5px;
+}
+.heading .heading-right i,
+.heading .heading-right {
+  text-align: right;
+  color: #a0b1b2;
+}
+/*----- heading -------*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 30px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}

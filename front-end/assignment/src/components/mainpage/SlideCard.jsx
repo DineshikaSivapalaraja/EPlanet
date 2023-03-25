@@ -14,14 +14,14 @@ const SlideCard = () => {
        {
             id: 2,
             title: "50% off For Your First Shopping",
-            desc: "ThunderBolt Electronics for all your Computer needs",
+            desc: "Eplanet for all your Computer needs",
             cover:"./images/box-speaker.png",
         },
          
         {
             id: 3,
             title: "50% off For Your First Shopping",
-            desc: "ThunderBolt Electronics for all your Computer needs",
+            desc: "Eplanet for all your Computer needs",
             cover:"./images/desk-1.png",
         },
       
