@@ -90,8 +90,8 @@ input, button {
 .category {
   width: 22%;
   box-shadow: rgba(193, 194, 194, 0.377) 0 4px 16px;
-  height: 25rem;
-  padding: 2rem 3rem;
+  height: 30rem;
+  padding: 1rem 3rem;
   border-radius: 2rem;
   
 }
@@ -103,8 +103,9 @@ input, button {
   object-fit: contain;
 }
 .category span {
-  margin: 10px 20px;
+  margin: 10px 0 10px 20px;
   text-transform: capitalize;
+  width: 70%;
 }
 
 .category .box {
@@ -190,6 +191,7 @@ input, button {
 .flash_background{
   margin-top: 3rem;
   
+  
 }
 
 .control-btn .next,
@@ -231,7 +233,7 @@ input, button {
 
 
 .product {
-  background: #3f565771;
+  background-color: #0474783a;
   padding: 2rem;
   position: relative;
   border-radius: 8px;
@@ -329,4 +331,12 @@ input, button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+}
+
+/**********big discounts**********/
+
+.Discount .box{
+  height: 20rem;
+  margin-top: 1.5rem;
+  background-color: #0474783a;
 }

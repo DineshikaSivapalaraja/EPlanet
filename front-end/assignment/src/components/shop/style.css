@@ -1,0 +1,82 @@
+.shop .category {
+    padding: 30px;
+    height: 85vh;
+}
+
+.chead h1 {
+font-size: 1.4rem;
+margin-bottom: 1.4rem;
+}
+
+.chead h1:nth-child(2) {
+opacity: 0.5;
+border-left: 3px solid #ffffffb3;
+padding-left: 4rem;
+}
+
+.shop .category .box {
+background-color: #8b919788;
+margin: 0.7rem 0;
+padding: 0 1.6rem;
+transition: 0.5s;
+border-radius: 5px;
+}
+
+.brandimg{
+width: 4rem;
+margin-right: 2rem;
+}
+
+
+.shop .category .box:hover {
+background-color: #fff;
+box-shadow: rgba(20, 133, 127, 0.489) 0px 4px 16px;
+color: black;
+font-weight: 600;
+}
+
+.shop .box2 {
+margin-top: 4rem !important;
+text-align: center;
+}
+
+.shop .category button {
+padding: 10px;
+background: none;
+text-align: center;
+font-size: 1.3rem;
+font-weight: 600;
+}
+
+.shop .contentWidth {
+margin-left: 30px;
+}
+
+.contentWidth .heading-left h2{
+  margin-left: -10.5rem;
+}
+
+.grid1 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+}
+
+.shopProImg{
+    margin: 1.5rem 0.5rem 0;
+    width: 95%;
+    border-radius: 1.2rem;
+}
+
+.shop .product img {
+align-items: center;
+
+}
+
+.shop .product {
+transition: 0.5s;
+}
+
+.shop .product:hover {
+box-shadow: rgba(233, 235, 237, 0.418) 0px 4px 16px;
+}

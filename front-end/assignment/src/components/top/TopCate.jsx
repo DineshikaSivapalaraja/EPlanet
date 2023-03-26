@@ -9,7 +9,7 @@ const TopCate = () => {
             <div className='container'>
                 <div className='heading d_flex'>
                         <div className='heading-left row  f_flex'>
-                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-border-all"></i>
                             <h2>Top Categories</h2>
                         </div>
                         <div className='heading-right row '>

@@ -17,22 +17,31 @@ const Categories = () => {
             cateName: "Computers",
         },
         {
+            cateImg:"ph ph-mouse",
+            cateName: "Computer Accessories",
+        },
+        {
             cateImg:"fa fa-print",
             cateName: "Printers",
         },
         {
-            cateImg:"fa fa-headphones",
-            cateName: "HeadPhones",
+            cateImg:"ph ph-watch",
+            cateName: "Watches",
         },
         {
             cateImg:"fa fa-camera",
             cateName: "Cameras",
         },
         {
-            cateImg:"fa fa-tablet phone",
-            cateName: "SmartPhones",
+            cateImg:"ph ph-device-mobile",
+            cateName: "Smartphones",
         },
-          
+        
+        {
+            cateImg:"ph ph-house",
+            cateName: "Home & Kitchen Appliaces",
+        },  
+
     ]
     return (
         <>

@@ -9,7 +9,7 @@
 .homeSlide h1 {
     font-size: 2.8rem;
     line-height: 55px;
-    margin: 2rem 1rem;
+    margin: 2.5rem 1rem;
   }
   
   .homeSlide p {
@@ -30,6 +30,7 @@
   .homeSlide ul li button {
     background: transparent !important;
     color: transparent !important;
+    
   }
 
   .homeSlide ul li button::before {
@@ -43,6 +44,7 @@
 
   .homeSlide .box {
     display: flex !important;
+    margin-bottom: 5rem;
   }
 
   .homeSlide .box .left {

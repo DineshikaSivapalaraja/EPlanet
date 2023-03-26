@@ -10,8 +10,9 @@
 
 
 
-.content{
+.NewArrivals .content{
         height: auto;
+        background-color: #04747864;
 }
 
 .NewArrivals h4 {

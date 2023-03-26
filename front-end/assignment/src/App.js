@@ -3,12 +3,15 @@ import Header from './common/header/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Pages from './pages/Pages';
 import Data from './components/flashDeals/Data';
+import Sdata from './components/shop/Sdata';
 import { useState } from 'react';
 import Cart from "./common/cart/Cart"
+import Footer from './common/footer/Footer';
 
 function App() {
   // Step1 : Fetch data from Database
   const { productItems } = Data
+  const { shopItems } = Sdata
 
   const [ cartItem, setCardItem] = useState([])
 
@@ -39,12 +42,13 @@ const decreaseQty = (product) => {
         <Header cartItem={cartItem}/>
         <Switch>
           <Route path="/" exact>
-            <Pages productItems={productItems} addToCart={addToCart}/>
+            <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems}/>
           </Route>
           <Route path="/cart" exact>
             <Cart cartItem={cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     </>
 
