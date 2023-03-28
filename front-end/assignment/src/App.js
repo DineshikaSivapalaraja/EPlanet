@@ -7,6 +7,10 @@ import Sdata from './components/shop/Sdata';
 import { useState } from 'react';
 import Cart from "./common/cart/Cart"
 import Footer from './common/footer/Footer';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Login from './pages/Login';
+
 
 function App() {
   // Step1 : Fetch data from Database
@@ -46,6 +50,15 @@ const decreaseQty = (product) => {
           </Route>
           <Route path="/cart" exact>
             <Cart cartItem={cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
+          </Route>
+          <Route path="/about" exact>
+            <About/>
+          </Route>
+          <Route path="/login" exact>
+            <Login/>
+          </Route>
+          <Route path="/contact" exact>
+            <Contact/>
           </Route>
         </Switch>
         <Footer/>

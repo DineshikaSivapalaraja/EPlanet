@@ -1,0 +1,164 @@
+.about .about-top, .contact-top .about-top{
+    background-color: #3f5657;
+    padding: 4rem;
+    margin: 4rem;
+    display: flex;
+    border-radius: 2rem;
+}
+.about-top .aboutimg{
+    width: 200rem;
+    margin: 0 2rem;
+   
+}
+
+.about-top .aboutimg img, .cont-left img{
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+
+.about-top .aboutcont{
+    margin-left: 2rem;
+    padding: 2rem;
+    text-align: justify;
+}
+.about-top .aboutcont h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aboutcont .contbut{
+    text-align: center;
+    background-color: #047478;
+    color: rgba(0, 0, 0, 0.774);
+    margin: 4rem 0 0;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 1.5rem;
+}
+
+
+.contbut:hover{
+    cursor: pointer;
+    background: #214344;
+   }
+
+.about-bottom{
+   
+    padding: 2rem;
+    
+}
+
+.reviews{
+   
+    display: block;
+    padding: 2rem;
+}
+
+.rev{
+    background-color: #3f5657;
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    border-radius: 2rem;
+    
+}
+
+.rev img{
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem;
+}
+
+.revcont{
+    
+    margin-left: 1rem;
+    width: 90%;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+.revcont p{
+    padding: 2rem 4rem 2rem 2rem;
+}
+
+.revcont .stars, h3{
+    padding-left: 2rem;
+}
+
+.revcont .stars{
+    color: rgb(219, 165, 28);
+}
+
+.cont-right{
+    margin: 3rem 6rem 1rem 2rem;
+    padding: 2rem;
+    text-align: justify;
+}
+.cont-right h3{
+    margin: 1.5rem 0;
+}
+
+.conform{
+    background-color: #3f5657;
+    margin: 4rem;
+    border-radius: 2rem;
+    padding: 4rem 6rem;
+    text-align: center;
+}
+
+.cont h1{
+    margin-bottom: 2rem;
+}
+
+.conform table{
+  
+  margin: 0 28rem;
+}
+
+.conform table tr{
+    text-align: left;
+}
+
+.lab{
+    margin-right: 2rem;
+}
+
+.conform .cont input{
+    width: 10rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.4rem;
+}
+
+.conform .cont input[name]{
+    width: 19.5rem;
+    background-color: #ffffff77;
+}
+
+.conform .cont textarea{
+    background-color: #ffffff77;
+    border-radius: 0.4rem;
+}
+
+.conform .cont input[name]{
+    width: 19.5rem;
+}
+
+.subbtn{
+    background-color: #047478;
+    color: #fff;
+    
+}
+
+.subbtn:hover{
+    background-color: #214344;
+    
+}
+
+.contact-top{
+    background-color: #214344;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+
