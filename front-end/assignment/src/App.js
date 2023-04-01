@@ -9,8 +9,8 @@ import Cart from "./common/cart/Cart"
 import Footer from './common/footer/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Login from './pages/Login';
-
+import Login1 from './pages/user/Login1';
+import Register from './pages/user/Register';
 
 function App() {
   // Step1 : Fetch data from Database
@@ -51,15 +51,10 @@ const decreaseQty = (product) => {
           <Route path="/cart" exact>
             <Cart cartItem={cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
           </Route>
-          <Route path="/about" exact>
-            <About/>
-          </Route>
-          <Route path="/login" exact>
-            <Login/>
-          </Route>
-          <Route path="/contact" exact>
-            <Contact/>
-          </Route>
+          <Route path="/about" exact><About/></Route>
+          <Route path="/login" exact><Login1/></Route>
+          <Route path="/contact" exact><Contact/></Route>
+          <Route path="/register" exact><Register/></Route>
         </Switch>
         <Footer/>
       </Router>

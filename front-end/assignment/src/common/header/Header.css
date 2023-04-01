@@ -87,6 +87,24 @@
 .search .f_flex {
     justify-content: end;
 }
+
+.userpop{
+    background: none;
+    color: #fff;
+}
+
+.relobtn{
+    padding: 1rem 1rem;
+    display: flex;
+}
+.relobtn .reglink, .loglink{
+    background-color: rgb(11, 86, 72);
+    padding: 0.8rem;
+    margin-right: 2rem;
+    border-radius: 10px;
+    text-align: center;
+   
+}
 /*----------------Search---------------------*/
 
 

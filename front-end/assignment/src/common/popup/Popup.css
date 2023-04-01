@@ -1,0 +1,40 @@
+.popup-box {
+    position: fixed;
+    width: 20%;
+    top: -0.6rem;
+    right: 2rem;
+    z-index: 5;
+    
+  }
+   
+  .popbox {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 6.4rem;
+    max-height: 70vh;
+    margin-top: calc(100vh - 85vh - 20px);
+    background: #6a7876;
+    border-radius: 2rem;
+    padding: 10px 20px;
+    border: 1px solid #99999950;
+    overflow: auto;
+    
+  }
+   
+  .pop-close-icon {
+    content: 'x';
+    cursor: pointer;
+    position: fixed;
+    right: calc(5% - 30px);
+    top: calc(99vh - 85vh - 33px);
+    background: #3e9687;
+    color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #9999995b;
+    font-size: 20px;
+  }

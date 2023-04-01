@@ -39,7 +39,7 @@ const Categories = () => {
         
         {
             cateImg:"ph ph-house",
-            cateName: "Home & Kitchen Appliaces",
+            cateName: "Home & Kitchen Appliances",
         },  
 
     ]
