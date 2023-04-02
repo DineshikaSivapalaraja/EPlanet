@@ -40,3 +40,63 @@ footer {
     padding: 1rem;
     margin-right: 2rem;
   }
+
+
+  @media screen and (max-width: 912px){
+    footer {
+      padding: 50px 0;
+    }
+    footer h2 {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+    footer p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    footer li {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    .icon{
+      display: block;
+      }
+  
+    .icon .img{
+        width: 50%;
+        margin: 1rem auto;
+        
+    }
+    
+    
+  }
+
+  /* Media query for screens less than 768px */
+@media screen and (max-width: 767px) {
+  
+  footer h2 {
+    font-size: 24px;
+  }
+  footer p {
+    font-size: 14px;
+ }
+  footer li {
+    font-size: 14px;
+  }
+  
+  .boxx {
+    
+    margin: 2rem;
+  }
+
+  .icon{
+    display: block;
+    }
+
+  .icon .img{
+     
+      margin: 1rem auto;
+      
+  }
+}
+

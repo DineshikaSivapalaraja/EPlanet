@@ -13,7 +13,7 @@
     width: 30%;
     margin-top: 2rem;
     margin-left: 3rem;
-    height: 15rem;
+    height: 20rem;
   }
   .cart-list {
     background-color: #002628;
@@ -92,4 +92,18 @@
     font-size: 2rem;
     margin: 2rem;
     height: 8rem;
+  }
+
+  .proceedcheck{
+    margin: 4rem 0;
+    text-align: center;
+  }
+
+  .procheck{
+    background: #022728;
+    margin: 1rem;
+    padding: 15px;
+    border-radius: 15px;
+    color: #faf7f7;
+    font-weight: 500;
   }

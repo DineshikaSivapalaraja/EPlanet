@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import {Link} from 'react-router-dom';
 
 const Cart = ({cartItem, addToCart, decreaseQty}) => {
     const totalPrice = cartItem.reduce((price, item) => price + item.qty * item.price, 0)
@@ -48,6 +49,9 @@ const Cart = ({cartItem, addToCart, decreaseQty}) => {
                         <div className=' d_flex'>
                         <h4>Total Price :</h4>
                         <h3>Rs. {totalPrice}.00</h3>
+                        </div>
+                        <div className="proceedcheck">
+                            <Link to="/checkout" className="procheck">Proceed to Checkout</Link>
                         </div>
                     </div>
                 </div>

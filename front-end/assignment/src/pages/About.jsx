@@ -28,7 +28,7 @@ export default function About() {
         </div>
         
         <div className="about-bottom">
-            <h1 class="heading">Client's Reviews</h1>
+            <h1 class="revhead">Client's Reviews</h1>
             <div className="reviews">
                 <div className="rev">
                 <img src="./images/new.png" alt=""/>

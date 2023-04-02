@@ -11,6 +11,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login1 from './pages/user/Login1';
 import Register from './pages/user/Register';
+import Checkout from './components/checkout/Checkout';
+import Cardpay from './components/cardpay/Cardpay';
 
 function App() {
   // Step1 : Fetch data from Database
@@ -55,6 +57,8 @@ const decreaseQty = (product) => {
           <Route path="/login" exact><Login1/></Route>
           <Route path="/contact" exact><Contact/></Route>
           <Route path="/register" exact><Register/></Route>
+          <Route path="/checkout" exact><Checkout/></Route>
+          <Route path="/cardpay" exact><Cardpay/></Route>
         </Switch>
         <Footer/>
       </Router>

@@ -14,7 +14,7 @@ export default function Register() {
                             <label for="fmane">First name : </label>
                         </div>
                         <div className="logcol2">
-                        <input type="username" id='fname' placeholder="First name.." required />
+                        <input type="text" id='fname' placeholder="First name.." required />
                         </div>
                     </div>
                     <div className="logrow1">
@@ -22,15 +22,15 @@ export default function Register() {
                             <label for="lmane">Last name : </label>
                         </div>
                         <div className="logcol2">
-                        <input type="username" id='lname' placeholder="Last name.." required />
+                        <input type="text" id='lname' placeholder="Last name.." required />
                         </div>
                     </div>
                     <div className="logrow1">
                         <div className="logcol1">
-                            <label for="umane">Username : </label>
+                            <label for="umane">Email : </label>
                         </div>
                         <div className="logcol2">
-                        <input type="username" id='uname' placeholder="Your username.." required />
+                        <input type="email" id='email' placeholder="Your email.." required />
                         </div>
                     </div>
                     <div className="logrow1">

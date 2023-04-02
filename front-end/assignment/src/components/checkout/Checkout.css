@@ -1,0 +1,84 @@
+.checkout{
+    background-color: #3f5657;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.checkcont{
+    padding: 2rem;
+    display: flex;
+}
+
+.checkcol-left{
+    width: 50%;
+}
+
+.left-row{
+    margin: 1rem;
+    display: flex;
+}
+.rowlable{
+    margin-top: 8px;
+}
+
+.rowinput input{
+    padding: 1rem;
+    border-radius: 10px;
+    width: 30rem;
+   margin-left: 2rem;
+   background-color: rgba(255, 255, 255, 0.463);
+   color: black;
+   font-weight: 400;
+}
+
+.payment {
+    padding: 2rem;
+    display: flex;
+}
+
+.paymethod{
+    margin: 0.5rem 2rem;
+}
+
+.checkbtn{
+    background-color: #047478;
+    padding: 1rem;
+    width: 20%;
+    margin: 3rem auto;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.checkbtn:hover{
+    cursor: pointer;
+    background: #053c3e;
+}
+
+/********card-payment********/
+.cardpay{
+    background-color: rgba(60, 52, 44, 0.735);
+    width: 30%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.cardpayrow{
+    margin: 10px;
+    padding: 1rem;
+}
+
+.cardinput select{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #cdc4c49f;
+    width: 80%;
+    font-weight: 500;
+   
+}
+
+.cardpaylable{
+    margin-bottom: 10px;
+}

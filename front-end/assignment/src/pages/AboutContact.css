@@ -7,7 +7,7 @@
 }
 .about-top .aboutimg{
     width: 200rem;
-    margin: 0 2rem;
+    margin: auto;
    
 }
 
@@ -45,6 +45,7 @@
 .about-bottom{
    
     padding: 2rem;
+    text-align: center;
     
 }
 
@@ -64,8 +65,8 @@
 }
 
 .rev img{
-    width: 10rem;
-    height: 10rem;
+    width: 20%;
+    height: 20%;
     margin: 2rem;
 }
 
@@ -161,4 +162,73 @@
     border-radius: 2rem;
 }
 
+@media screen and (max-width: 912px){
+    .about .about-top, .contact-top .about-top{
+        display: block;
+        margin: 2rem;
+        padding: 2rem;
 
+    }
+
+    .about-top .aboutimg{
+        width: 60%;
+              
+    }
+
+    .about-bottom{
+   
+        padding: 0;
+        text-align: center;
+       
+        
+    }
+
+    .rev{
+        display: block;
+        border-radius: 2rem;
+        padding: 0 0 1rem 0;
+       
+    }
+
+    .revcont{
+    
+        margin: 0;
+        width: 100%;
+        text-align: justify;
+        font-size: 12px;
+        
+        
+    }
+    .revcont h3{
+        margin-bottom: 1rem;
+    }
+
+    .revcont p{
+        padding: 12px;
+    }
+
+    .revcont .stars, h3{
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .about-top .aboutcont{
+        margin: 0;
+        padding: 2px;
+        text-align: justify;
+      
+        
+    }
+    .about-top .aboutcont h3{
+        font-size: 22px;
+        margin: 2rem 0;
+        padding: 0;
+       
+    }
+
+    .about-top .aboutcont p{
+        font-size: 12px;
+        
+    }
+}

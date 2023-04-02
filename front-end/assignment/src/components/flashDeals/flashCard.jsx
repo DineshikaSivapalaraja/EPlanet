@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -27,11 +27,7 @@ const NextArrow = (props) => {
   }
 
 const FlashCard = ({productItems, addToCart}) => {
-    const [count, setCount] = useState(0)
-    const increment = () => {
-    setCount(count + 1)
-    }
-
+  
     const settings = {
         dots: false,
         infinite: true,
@@ -53,10 +49,7 @@ const FlashCard = ({productItems, addToCart}) => {
                     <div className="img">
                         <span className="discount">{productItems.discount}% Off</span>
                         <img src={productItems.cover} alt="" className="flashpic"/>
-                        <div className="product-like">
-                            <lable className="likeLable">{count}</lable> <br/>
-                            <i className="fa fa-heart" onClick={increment}></i>
-                        </div>
+                      
                     </div>
                     <div className="product-details">
                         <h3>{productItems.name}</h3>

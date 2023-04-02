@@ -14,7 +14,7 @@ export default function Login1() {
                             <label for="umane">Username : </label>
                         </div>
                         <div className="logcol2">
-                        <input type="username" id='uname' placeholder="Your username.." required />
+                        <input type="text" id='uname' placeholder="Your username.." required />
                         </div>
                     </div>
                     <div className="logrow1">
