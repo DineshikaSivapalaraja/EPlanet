@@ -1,32 +1,26 @@
-.logincls{
-  
+.form{
     margin: 2rem;
     padding: 2rem;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center;  
 }
 
-.loginbox{
+.register-form, .login-form{
     background-color: #3f5657;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
     width: 30%;
-    margin: auto;
-    
+    margin: auto;  
 }
 
 .logrow1{
     margin: 1.5rem 0;
-
 }
 
 .logcol1{
     margin: 1rem 0;
 }
-
-
 
 form input{
     padding: 1rem;
@@ -40,7 +34,7 @@ form input ::placeholder{
     color: rgb(0, 0, 0);
 }
 
-form input[type="submit"]{
+form input[type="submit"]{ 
     margin-top: 1.5rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -48,14 +42,12 @@ form input[type="submit"]{
     width: 40%;
     color: #fff;
    
-}
+} 
 
-.forget{
+.pro{
     margin: 2rem 0 1rem;
     font-size: 15px;
-    color: rgb(252, 255, 255);
+    color: rgb(199, 230, 230);
+   
 }
 
-.forget span{
-    color: rgb(199, 230, 230);
-}
