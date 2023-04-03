@@ -7,6 +7,7 @@ export default function Checkout() {
     <>
         <div className="checkout">
             <h1>Delivary Details</h1>
+            <form>
             <div className="checkcont">
                 <div className="checkcol-left">
                     <div className="left-row">
@@ -90,6 +91,10 @@ export default function Checkout() {
             <div className="checkbtn">
                 <Link to="">Checkout</Link>
             </div>
+            <div className="canclebtn">
+                <Link to="/">Cancle</Link>
+            </div>
+            </form>
         </div>
     
     </>

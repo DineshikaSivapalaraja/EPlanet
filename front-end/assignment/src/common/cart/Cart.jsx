@@ -53,6 +53,9 @@ const Cart = ({cartItem, addToCart, decreaseQty}) => {
                         <div className="proceedcheck">
                             <Link to="/checkout" className="procheck">Proceed to Checkout</Link>
                         </div>
+                        <div className="proceedcheck">
+                            <Link to="/" className="contshhop">Continue Shopping</Link>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -42,8 +42,7 @@
     margin: 0.5rem 2rem;
 }
 
-.checkbtn{
-    background-color: #047478;
+.checkbtn, .canclebtn{
     padding: 1rem;
     width: 20%;
     margin: 3rem auto;
@@ -51,9 +50,17 @@
     border-radius: 2rem;
 }
 
+.checkbtn{
+    background: #572b08;
+}
+
+.canclebtn{
+    background: #078d92;
+}
+
 .checkbtn:hover{
     cursor: pointer;
-    background: #053c3e;
+    background: #a88a07;
 }
 
 /********card-payment********/

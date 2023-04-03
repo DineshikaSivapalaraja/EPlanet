@@ -13,11 +13,13 @@ import Login1 from './pages/user/Login1';
 import Register from './pages/user/Register';
 import Checkout from './components/checkout/Checkout';
 import Cardpay from './components/cardpay/Cardpay';
+import Singleproduct from './components/singleproduct/SingleProduct';
 
 function App() {
   // Step1 : Fetch data from Database
   const { productItems } = Data
   const { shopItems } = Sdata
+
 
   const [ cartItem, setCardItem] = useState([])
 
@@ -59,6 +61,7 @@ const decreaseQty = (product) => {
           <Route path="/register" exact><Register/></Route>
           <Route path="/checkout" exact><Checkout/></Route>
           <Route path="/cardpay" exact><Cardpay/></Route>
+          <Route path="/singleproduct" exact><Singleproduct/></Route>
         </Switch>
         <Footer/>
       </Router>

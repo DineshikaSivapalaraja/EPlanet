@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from 'react-router-dom';
 
 const ShopCart = ({ shopItems, addToCart }) => {
  
@@ -10,7 +11,7 @@ const ShopCart = ({ shopItems, addToCart }) => {
             <div className='product mtop'>
               <div className='img'>
                 <span className='discount'>{shopItems.discount}% Off</span>
-                <img src={shopItems.cover} alt='' className="shopProImg"/>
+                <Link to='/singleproduct'><img src={shopItems.cover} alt='' className="shopProImg"/></Link>
                 
               </div>
               <div className='product-details'>

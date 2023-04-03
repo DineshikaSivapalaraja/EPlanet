@@ -80,3 +80,60 @@ transition: 0.5s;
 .shop .product:hover {
 box-shadow: rgba(233, 235, 237, 0.418) 0px 4px 16px;
 }
+
+
+/*************Single product*******/
+
+.singleproduct{
+  background-color: #3f5657;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  
+}
+
+.singletop{
+  display: flex;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.singleimg{
+  margin: 2rem;
+}
+
+.single-detail{
+  margin: auto 2rem;
+}
+
+.single-detail h2{
+  font-size: 35px;
+}
+
+.singleprice{
+  color: rgb(229, 192, 30);
+  font-size: 25px;
+  margin: 2rem 0;
+}
+
+.singbtn{
+
+  display: flex;
+  padding: 2rem 0;
+}
+
+.singbtnsub{
+  background: #09bbc1;
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin: 1rem 4rem 1rem 0;
+}
+
+.singcartbtn, .contshopbtn{
+  background: #09bbc1;
+  padding: 10px 40px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  width: 15rem;
+}
