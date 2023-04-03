@@ -92,7 +92,7 @@ export default function Checkout() {
                 <Link to="">Checkout</Link>
             </div>
             <div className="canclebtn">
-                <Link to="/">Cancle</Link>
+                <Link to="/">Cancel</Link>
             </div>
             </form>
         </div>
