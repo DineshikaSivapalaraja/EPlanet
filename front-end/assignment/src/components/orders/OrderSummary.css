@@ -7,9 +7,10 @@
   }
     
   table {
-    border: 4px solid rgb(3, 61, 61);
-    width: 800px;
+    border: 5px solid rgb(3, 61, 61);
+    width: 900px;
     height: 400px;
+    margin-right: 10%;
   }
     
   th {
@@ -23,8 +24,9 @@
   }
   h3{
    
-  /* margin-right: 20%*/
+    margin-right: 10%;
     font-size: 30px; 
     margin-bottom: 30%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  
    }

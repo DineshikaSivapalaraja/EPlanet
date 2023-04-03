@@ -1,5 +1,8 @@
 
 import './OrderSummary.css';
+import camera from './camera.jpg';
+import TV from './TV.jpg';
+
   
 function Orders() {
   return (
@@ -16,8 +19,8 @@ function Orders() {
           <td>P_00023</td>
           <td>  
             <img
-              src={'./common/assets/images/logo1.png'}
-              width={100}
+              src={camera}
+              width={150}
               alt='Camera'
             />
           </td>
@@ -27,9 +30,9 @@ function Orders() {
           <td>P_00210</td>
           <td>
           <img
-              src={'./common/assets/images/logo1.png'}
+              src={TV}
               width={100}
-              alt='Camera'
+              alt='Sony_TV'
             />
           </td>
         </tr>
@@ -40,12 +43,12 @@ function Orders() {
         </tr>
         {/*  <tr>
              <th>Price</th>
-             <td>$ 1200</td>
+             <td>Rs. 120,000</td>
         </tr>  */  }
 
         <tr>
           <th>Total price</th>
-          <td>$ 2400</td>
+          <td>Rs. 525,000</td>
         </tr>
 
         <tr>
