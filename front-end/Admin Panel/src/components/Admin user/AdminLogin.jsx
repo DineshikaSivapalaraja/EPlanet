@@ -1,51 +1,84 @@
-import React, { useEffect } from 'react'
-import './AdminLogin.css'
-import {Link, useHistory} from 'react-router-dom';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './AdminLogin.css';
+import { Link, useHistory } from 'react-router-dom';
 
-export default function AdminLogin() {
-const history = useHistory();
+const AdminLogin = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const history = useHistory();
 
-  function handleClick() {
-    history.push('/card');
-  }
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (username === 'sheran' && password === 'sheran123') {
+      // Set session or redirect to dashboard
+      //console.log('Login success!');
+      history.push('/card');
+    } else {
+      toast.error('Incorrect username or password', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        style: {
+            fontSize: '15px'
+          }
+      });
+    }
+  };
 
-    
   return (
     <>
-        <div className="logincls">
-            <div className="loginbox">
-                <h1>Login</h1>
-                <form>
-                    <div className="logrow1">
-                        <div className="logcol1">
-                            <label for="umane">Username : </label>
-                        </div>
-                        <div className="logcol2">
-                        <input type="text" id='uname' placeholder="Your username.." required />
-                        </div>
-                    </div>
-                    <div className="logrow1">
-                        <div className="logcol1">
-                            <label for="password">Password : </label>
-                        </div>
-                        <div className="logcol2">
-                        <input type="password" id='password' placeholder="Your password.." required/>
-                        </div>
-                    </div>
-                    <button class ="button-30" type="button" onClick={handleClick} >Login</button>
-                    
-                    {/* <div class="logbutton">
-                    <input type="submit" value="Login" name="submit"/>
-                    </div> */}
-                
-                
-                </form>
-                <div class="forget">
-                    <Link to='#'><span>Forget Password</span></Link>
-                </div>
+      <div className='logincls'>
+        <div className='loginbox'>
+          <h1>Admin Login</h1>
+          <form onSubmit={handleLogin}>
+            <div className='logrow1'>
+              <div className='logcol1'>
+                <label htmlFor='username'>Username:</label>
+              </div>
+              <div className='logcol2'>
+                <input
+                  type='text'
+                  id='uname'
+                  placeholder='Your username..'
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
             </div>
+            <div className='logrow1'>
+              <div className='logcol1'>
+                <label htmlFor='password'>Password:</label>
+              </div>
+              <div className='logcol2'>
+                <input
+                  type='password'
+                  id='password'
+                  placeholder='Your password..'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+            <button className='button-30' type='submit'>
+              Login
+            </button>
+          </form>
+          <div className='forget'>
+            <Link to='#'>
+              <span>Forget Password</span>
+            </Link>
+          </div>
         </div>
-   
-   </>
-  )
-}
+      </div>
+      <ToastContainer />
+    </>
+  );
+};
+
+export default AdminLogin;

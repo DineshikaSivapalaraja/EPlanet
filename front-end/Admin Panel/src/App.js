@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Product from './components/Product/Product';
 import Feedback from "./components/Feedback/Feedback"
 import AdminLogin from "./components/Admin user/AdminLogin"
+import Order from './components/Order/Order';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Sidebar/>
         <Route path="/card" exact><Card/></Route>
         <Route path="/product" exact><Product/></Route>
+        <Route path="/order" exact><Order/></Route>
         <Route path="/feedback" exact><Feedback/></Route>
       </div>
     </div>
