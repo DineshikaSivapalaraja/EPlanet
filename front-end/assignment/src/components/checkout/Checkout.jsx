@@ -6,7 +6,7 @@ export default function Checkout() {
   return (
     <>
         <div className="checkout">
-            <h1>Delivary Details</h1>
+            <h1>Delivery Details</h1>
             <form>
             <div className="checkcont">
                 <div className="checkcol-left">
@@ -81,7 +81,7 @@ export default function Checkout() {
             <div className="payment">
                 <h2>Payment method :</h2>
                 <div className="paymethod">
-                    <input type='radio' name='paymenttype' value="Cash"/>Cash on Delivary                    
+                    <input type='radio' name='paymenttype' value="Cash"/>Cash on Delivery                    
                 </div>
                 <div className="paymethod">
                    <input type='radio' name='paymenttype' value="debit"/>Card Payment
@@ -92,7 +92,7 @@ export default function Checkout() {
                 <Link to="">Checkout</Link>
             </div>
             <div className="canclebtn">
-                <Link to="/">Cancle</Link>
+                <Link to="/">Cancel</Link>
             </div>
             </form>
         </div>

@@ -3,13 +3,14 @@ import Header from './common/header/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Pages from './pages/Pages';
 import Data from './components/flashDeals/Data';
+import Orders from './components/orders/OrderSummary';
 import Sdata from './components/shop/Sdata';
 import { useState } from 'react';
 import Cart from "./common/cart/Cart"
 import Footer from './common/footer/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Login1 from './pages/user/Login1';
+import Login from './pages/user/Login1';
 import Register from './pages/user/Register';
 import Checkout from './components/checkout/Checkout';
 import Cardpay from './components/cardpay/Cardpay';
@@ -56,12 +57,15 @@ const decreaseQty = (product) => {
             <Cart cartItem={cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
           </Route>
           <Route path="/about" exact><About/></Route>
-          <Route path="/login" exact><Login1/></Route>
+          
           <Route path="/contact" exact><Contact/></Route>
           <Route path="/register" exact><Register/></Route>
+          <Route path="/login" exact><Login/></Route>
           <Route path="/checkout" exact><Checkout/></Route>
           <Route path="/cardpay" exact><Cardpay/></Route>
           <Route path="/singleproduct" exact><Singleproduct/></Route>
+          <Route path="/ordersummary" exact><Orders/></Route>
+
         </Switch>
         <Footer/>
       </Router>
