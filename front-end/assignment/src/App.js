@@ -10,9 +10,8 @@ import Cart from "./common/cart/Cart"
 import Footer from './common/footer/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Login from './pages/user/Login';
+import Login from './pages/user/Login1';
 import Register from './pages/user/Register';
-import Reg_Log from './pages/user/Reg_Log'
 import Checkout from './components/checkout/Checkout';
 import Cardpay from './components/cardpay/Cardpay';
 import Singleproduct from './components/singleproduct/SingleProduct';
@@ -62,7 +61,6 @@ const decreaseQty = (product) => {
           <Route path="/contact" exact><Contact/></Route>
           <Route path="/register" exact><Register/></Route>
           <Route path="/login" exact><Login/></Route>
-          <Route path="/reg_log" exact><Reg_Log/></Route>
           <Route path="/checkout" exact><Checkout/></Route>
           <Route path="/cardpay" exact><Cardpay/></Route>
           <Route path="/singleproduct" exact><Singleproduct/></Route>

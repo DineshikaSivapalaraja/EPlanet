@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-auth-code-input": "^3.2.1"
+  }
+}
