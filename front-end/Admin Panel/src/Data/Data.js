@@ -22,7 +22,7 @@ export const SidebarData = [
     {
       icon: UilClipboardAlt,
       heading: "Orders",
-      path: "/product"
+      path: "/Orders"
     },
     {
       icon: UilUsersAlt,
@@ -30,4 +30,7 @@ export const SidebarData = [
       path: "/feedback"
     },
     
+    {icon: UilSignOutAlt,
+      heading: "LogOut",
+      path:""} 
   ];
