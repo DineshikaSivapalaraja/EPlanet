@@ -6,9 +6,12 @@ import { SidebarData } from "../../Data/Data";
 import { UilBars } from "@iconscout/react-unicons";
 import { motion } from "framer-motion";
 import {Link} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
 
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
+  const history = useHistory();
 
   const [expanded, setExpaned] = useState(true)
 
@@ -44,14 +47,13 @@ const Sidebar = () => {
             </div>
           );
         })}
-        {/* signoutIcon */}
-        <div className="menuItem">
-          <UilSignOutAlt />
-        </div>
+        
       </div>
     </motion.div>
     </>
   );
 };
+
+
 
 export default Sidebar;
