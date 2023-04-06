@@ -100,6 +100,11 @@ box-shadow: rgba(233, 235, 237, 0.418) 0px 4px 16px;
 
 .singleimg{
   margin: 2rem;
+  
+}
+.singleimg img {
+  width: 70%;
+  border-radius: 10px;
 }
 
 .single-detail{

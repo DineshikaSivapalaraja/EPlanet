@@ -2,6 +2,9 @@ import React from "react"
 import {Link} from 'react-router-dom';
 
 const ShopCart = ({ shopItems, addToCart }) => {
+
+  const userId = localStorage.getItem('userId');
+  console.log(userId);
  
   return (
     <>

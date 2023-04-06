@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import {Link} from 'react-router-dom';
 import './Login1.css'
+import { useState } from 'react';
+import axios from 'axios';
+
   
 class LoginForm extends React.Component {
+  
     constructor() {
     super();
     this.state = {
@@ -23,21 +27,57 @@ class LoginForm extends React.Component {
     });
   }
      
-    handleSubmit(event) {
+  handleSubmit(event) {
     event.preventDefault();
-  
     if(this.validate()){
-        console.log(this.state);
-  
-        let input = {};
-        input["email"] ="";
-        input["password"] = "";
-        this.setState({input:input});
+      const { email, password } = this.state.input;
+      const data = { email, password };
+      
+      const response = fetch('http://localhost:8080/auth/authenticate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        // Do something with the response data
+        localStorage.setItem('token',data.token);
+        localStorage.setItem('userId',data.userId);
+        localStorage.setItem('email', email);
+        console.log(localStorage.getItem('userId'));
 
-        //alert('Login Form is submitted');
-       
-  }
+        
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  
+      let input = {};
+      input["email"] ="";
+      input["password"] = "";
+      this.setState({input:input});
+
+    
+        const fetchData = async () => {
+          try {
+            const response = await axios.post(`http://localhost:8080/cart/create/${localStorage.getItem('userId')}`);
+  
+            console.log(response);
+           
+          } catch (error) {
+            console.error(error);
+            console.log(error);
+           
+          }
+        };
+        fetchData();
+    }
 }
+
+
    
   
   validate(){

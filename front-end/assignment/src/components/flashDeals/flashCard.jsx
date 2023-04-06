@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 
 
 const NextArrow = (props) => {
@@ -27,7 +29,8 @@ const NextArrow = (props) => {
   }
 
 const FlashCard = ({productItems, addToCart}) => {
-  
+
+   
     const settings = {
         dots: false,
         infinite: true,
@@ -42,13 +45,14 @@ const FlashCard = ({productItems, addToCart}) => {
         <Slider {...settings}>
         {
             productItems.map((productItems) => {
+                console.log(productItems.id);
 
          return (   
             <div className="box">
                 <div className="product mtop">
                     <div className="img">
-                        <span className="discount">{productItems.discount}% Off</span>
-                        <img src={productItems.cover} alt="" className="flashpic"/>
+                        <span className="discount">20% Off</span>
+                        <Link to={`/singleproduct?productId=${productItems.id}`}><img src={productItems.image_url}  alt="" className="flashpic"/></Link>
                       
                     </div>
                     <div className="product-details">

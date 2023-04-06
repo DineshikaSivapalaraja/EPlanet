@@ -15,6 +15,7 @@ import Register from './pages/user/Register';
 import Checkout from './components/checkout/Checkout';
 import Cardpay from './components/cardpay/Cardpay';
 import Singleproduct from './components/singleproduct/SingleProduct';
+import Shop2 from './components/shop/Shop2';
 
 function App() {
   // Step1 : Fetch data from Database
@@ -65,6 +66,7 @@ const decreaseQty = (product) => {
           <Route path="/cardpay" exact><Cardpay/></Route>
           <Route path="/singleproduct" exact><Singleproduct/></Route>
           <Route path="/ordersummary" exact><Orders/></Route>
+          <Route path="/products" exact><Shop2/></Route>
 
         </Switch>
         <Footer/>
