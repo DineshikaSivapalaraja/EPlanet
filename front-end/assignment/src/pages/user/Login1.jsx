@@ -1,14 +1,14 @@
 import React, { useReducer } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './Login1.css'
-import { useState } from 'react';
+// import { useState } from 'react';
 import axios from 'axios';
 
   
 class LoginForm extends React.Component {
   
-    constructor() {
-    super();
+    constructor(props) {
+    super(props);
     this.state = {
       input: {},
       errors: {}
@@ -43,13 +43,22 @@ class LoginForm extends React.Component {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        // Do something with the response data
+        
         localStorage.setItem('token',data.token);
         localStorage.setItem('userId',data.userId);
         localStorage.setItem('email', email);
+        // localStorage.setItem('firstname', data.firstname);
         console.log(localStorage.getItem('userId'));
+        // console.log(localStorage.getItem('firstname'));
+        this.props.history.push('/');
 
-        
+        // const history = useHistory();
+        // history.push('/');
+        // if(data.token){
+        //   // window.location.href="../Pages.jsx";
+        //   const history = useHistory();
+        //   history.push('/');
+        // }
       })
       .catch(error => {
         console.error('Error:', error);
@@ -85,11 +94,6 @@ class LoginForm extends React.Component {
       let errors = {};
       let isValid = true;
 
-      // if(!input["email"] && !input["password"]){
-      //   errors["email"] = "Enter your Email.";
-      //   errors["password"] = "Enter your Password.";
-
-      // }
    
       if (!input["email"]) {
         isValid = false;
@@ -178,3 +182,9 @@ class LoginForm extends React.Component {
 
   
 export default LoginForm;
+
+
+
+
+
+

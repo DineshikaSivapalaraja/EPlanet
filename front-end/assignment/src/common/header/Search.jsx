@@ -9,19 +9,23 @@ const Search = ({cartItem})=> {
         search.classList.toggle("active", window.scrollY > 100)
      })
 
-     const [isOpen, setIsOpen] = useState(false);
- 
+    
+    const [showPopup, setShowPopup] = useState(false);
+   
     const togglePopup = () => {
-        setIsOpen(!isOpen);
+        setShowPopup(!showPopup);
     }
 
+    const closePopup = () => {
+        setShowPopup(false);
+    }
 
     return (
         <>
          <section className="search">
             <div className="container c_flex">
                 <div className="logo width">
-                    <img src={logo} alt=""/>
+                <Link to="/"> <img src={logo} alt=""/></Link>
                 </div>
                 <div className="search-box f_flex">
                     <i className="fa fa-search"></i>
@@ -32,17 +36,20 @@ const Search = ({cartItem})=> {
                 <button onClick={togglePopup} className="userpop">
                      <i className="fa fa-user icon-circle"></i>
                 </button>
-                {isOpen && <Popup
+               
+
+                    {showPopup && <Popup
                     content={<>
                         <div className="relobtn">
-                             <Link to="/register" className="reglink" >Register</Link>
-                            <Link to="/login" className="loglink">Login</Link>
+                             <Link to="/register" className="reglink" onClick={closePopup}>Register</Link>
+                            <Link to="/login" className="loglink" onClick={closePopup}>Login</Link>
                         </div>
                        
                         
                     </>}
-                    handleClose={togglePopup}
-                    />}
+                    handleClose={closePopup}
+                    />} 
+
                 <div className="cart">
                     <Link to="/cart">
                         <i className="fa fa-shopping-bag icon-circle"></i>
@@ -57,3 +64,6 @@ const Search = ({cartItem})=> {
 }
 
 export default Search
+
+
+

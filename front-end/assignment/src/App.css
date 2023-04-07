@@ -249,9 +249,9 @@ input, button {
   font-size: 18px;
 }
 
-.product .rate{
+/* .product .rate{
   margin-left: 2rem;
-}
+} */
 
 .product .rate i {
   font-size: 15px;
@@ -262,7 +262,7 @@ input, button {
   display: flex;
   justify-content: space-between;
   color: #05c4ca;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
 }
 .price button {
   background: none;

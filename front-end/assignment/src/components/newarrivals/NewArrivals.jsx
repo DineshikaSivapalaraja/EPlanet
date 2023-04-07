@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react"
 import Cart from "./Cart"
 import "./style.css"
 
 const NewArrivals = () => {
+     const [newArrivalList, setNewArrivalList] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+               const response = await fetch("http://localhost:8080/product/get-all?limit=6");
+
+                const data = await response.json();
+                setNewArrivalList(data);
+                console.log(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <>
          <section className='NewArrivals background'>
@@ -18,7 +36,7 @@ const NewArrivals = () => {
                     </div>
                 </div>
 
-            <Cart />
+            <Cart newArrivalList={newArrivalList}/>
             </div>
       </section>
         </>

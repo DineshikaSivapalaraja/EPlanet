@@ -1,0 +1,90 @@
+.build, .con , h3, .vform, #verifyB {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family:"Poppins", sans-serif;
+}
+.vform{
+    height: 250px;
+    width: 600px;
+}
+
+.build {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+
+}
+:where(.con, .vform, .insert-field) {
+   display: flex;
+   flex-direction:  column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.con{
+    background: #033234;
+    padding: 30px 65px;
+    border-radius: 12px;
+    row-gap: 50px; /*20px*/
+    box-shadow : 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.con h3{
+    font-size: 2.5rem;
+    color:  white;
+    font-weight: 700;
+    text-align: center;
+}
+.vform .insert-field{
+    flex-direction: row;
+    column-gap: 30px;
+} 
+
+.vform input{
+    height: 80px;
+    width: 70px;
+}
+ .insert-field input{
+    height: 70px;
+    width: 70px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 4.0rem;
+    text-align: center;
+    border: 1px solid #ddd;
+
+}
+
+.insert-field input::-webkit-inner-spin-button,
+.insert-field input::-webkit-outer-spin-button {
+    display: none;
+}
+
+
+.vform #verifyB {
+    margin-top: 40px;
+    width: 40%;
+    color: white;
+    font-size: 2.0rem;
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    pointer-events: none;
+    background: #049ea9;
+    transition: all 2s ease;
+}
+
+.vform #verifyB .active{
+    background: #51aae5;
+    pointer-events: auto;
+    
+}
+
+.vform #verifyB:hover{
+    background:  #287275; 
+}

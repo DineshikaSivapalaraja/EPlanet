@@ -3,7 +3,7 @@ import Header from './common/header/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Pages from './pages/Pages';
 import Data from './components/flashDeals/Data';
-import Orders from './components/orders/OrderSummary';
+import Orders from './components/orders/OrderDisplay';
 import Sdata from './components/shop/Sdata';
 import { useState } from 'react';
 import Cart from "./common/cart/Cart"
@@ -12,6 +12,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/user/Login1';
 import Register from './pages/user/Register';
+import OTP from './pages/user/OtpVerifyPage';
 import Checkout from './components/checkout/Checkout';
 import Cardpay from './components/cardpay/Cardpay';
 import Singleproduct from './components/singleproduct/SingleProduct';
@@ -67,6 +68,7 @@ const decreaseQty = (product) => {
           <Route path="/singleproduct" exact><Singleproduct/></Route>
           <Route path="/ordersummary" exact><Orders/></Route>
           <Route path="/products" exact><Shop2/></Route>
+          <Route path="/otp" exact><OTP/></Route>
 
         </Switch>
         <Footer/>

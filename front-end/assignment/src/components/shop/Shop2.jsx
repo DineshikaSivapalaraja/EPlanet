@@ -2,7 +2,7 @@ import React from "react";
 import ShopCart from "./ShopCart"
 import "./style.css"
 
-const Shop = ({ addToCart, shopItems }) => {
+const Shop2 = ({ addToCart }) => {
     return (
         <>
         <section className='shop background'>
@@ -14,8 +14,8 @@ const Shop = ({ addToCart, shopItems }) => {
                         <h2>Electric Items</h2>
                     </div>
                 </div>
-                    <div className='product-content  grid1'>
-                    <ShopCart addToCart={addToCart} shopItems={shopItems} />
+                <div className='product-content  grid1'>
+                    <ShopCart addToCart={addToCart}  />
                     </div>
                 </div>
             </div>
@@ -24,4 +24,4 @@ const Shop = ({ addToCart, shopItems }) => {
     )
 }
 
-export default Shop
+export default Shop2
