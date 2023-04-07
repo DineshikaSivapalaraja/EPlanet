@@ -3,7 +3,7 @@ import Header from './common/header/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Pages from './pages/Pages';
 import Data from './components/flashDeals/Data';
-import Orders from './components/orders/OrderSummary';
+// import Orders from './components/orders/OrderSummary';
 import Sdata from './components/shop/Sdata';
 import { useState } from 'react';
 import Cart from "./common/cart/Cart"
@@ -16,6 +16,7 @@ import Checkout from './components/checkout/Checkout';
 import Cardpay from './components/cardpay/Cardpay';
 import Singleproduct from './components/singleproduct/SingleProduct';
 import OTPInput from './pages/user/OtpVerifyPage';
+import Order from './components/orders/OrderDisplay';
 
 function App() {
   // Step1 : Fetch data from Database
@@ -57,16 +58,17 @@ const decreaseQty = (product) => {
           <Route path="/cart" exact>
             <Cart cartItem={cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
           </Route>
-          <Route path="/about" exact><About/></Route>
-          
+          <Route path="/about" exact><About/></Route> 
           <Route path="/contact" exact><Contact/></Route>
           <Route path="/register" exact><Register/></Route>
           <Route path="/login" exact><Login/></Route>
           <Route path="/checkout" exact><Checkout/></Route>
           <Route path="/cardpay" exact><Cardpay/></Route>
           <Route path="/singleproduct" exact><Singleproduct/></Route>
-          <Route path="/ordersummary" exact><Orders/></Route>
+          {/* <Route path="/ordersummary" exact><Orders/></Route> */}
           <Route path="/otpverify" exact><OTPInput/></Route>
+          <Route path="/ordersummary" exact><Order/></Route>
+
 
         </Switch>
         <Footer/>
