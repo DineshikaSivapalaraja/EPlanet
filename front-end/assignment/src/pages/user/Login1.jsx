@@ -32,6 +32,7 @@ class LoginForm extends React.Component {
     if(this.validate()){
       const { email, password } = this.state.input;
       const data = { email, password };
+      console.log(data);
       
       const response = fetch('http://localhost:8080/auth/authenticate', {
         method: 'POST',
@@ -47,18 +48,12 @@ class LoginForm extends React.Component {
         localStorage.setItem('token',data.token);
         localStorage.setItem('userId',data.userId);
         localStorage.setItem('email', email);
-        // localStorage.setItem('firstname', data.firstname);
         console.log(localStorage.getItem('userId'));
-        // console.log(localStorage.getItem('firstname'));
-        this.props.history.push('/');
+       
+        window.location.href="/"
+        // this.props.history.push('/');
 
-        // const history = useHistory();
-        // history.push('/');
-        // if(data.token){
-        //   // window.location.href="../Pages.jsx";
-        //   const history = useHistory();
-        //   history.push('/');
-        // }
+     
       })
       .catch(error => {
         console.error('Error:', error);

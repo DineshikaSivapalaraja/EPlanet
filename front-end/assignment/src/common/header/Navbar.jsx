@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = ()=> {
-    // const [username, setUsername] = useState('');
-
-    // username =  localStorage.getItem('userId');
+     const username = localStorage.getItem('email');
+    console.log(username)
 
 
     const [MobileMenu, setMobileMenu] = useState(false)
@@ -21,11 +20,11 @@ const Navbar = ()=> {
                         </div>
                         <div className="navlink">
                             <ul className={MobileMenu? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
-                                {/* {username ? (
+                                 {username ? (
                                     <li><span className="user">{username}</span></li>
                                 ) : (
                                     <li><a href="/login">Login</a></li>
-                                )} */}
+                                )} 
 
                                 <li>
                                     <Link to="/">Home</Link>

@@ -29,14 +29,38 @@ class RegisterForm extends React.Component {
   
     if(this.validate()){
         console.log(this.state);
+        const { firstname,lastname,email, password } = this.state.input;
+        const data = { firstname,lastname,email, password };
+        localStorage.setItem('email', email);
+
+        console.log(data);
+      
+      const response = fetch('http://localhost:8080/auth/user-register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      
+        // this.props.history.push('/');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   
         let input = {};
-        input["fname"] = "";
-        input["lname"] = "";
+        input["firstname"] = "";
+        input["lastname"] = "";
         input["email"] = "";
         input["password"] = "";
         input["cpassword"] = "";
         this.setState({input:input});
+
+        window.location.href="/otp"
   
         // alert('Registration Form is submitted');
     }
@@ -48,29 +72,29 @@ class RegisterForm extends React.Component {
       let isValid = true;
    
   
-      if (typeof input["fname"] !== "undefined") {
+      if (typeof input["firstname"] !== "undefined") {
         const re = /^\S*$/;
-        if (!input["fname"]) {
+        if (!input["firstname"]) {
           isValid = false;
-          errors["fname"] = "Enter your First Name.";
+          errors["firstname"] = "Enter your First Name.";
         }
-        else if(input["fname"].length < 5 || !re.test(input["fname"])){
+        else if(input["firstname"].length < 5 || !re.test(input["firstname"])){
             isValid = false;
-            errors["fname"] = "Firstname should have atleast five characters and cannot contains numbers";
+            errors["firstname"] = "Firstname should have atleast five characters and cannot contains numbers";
         }
       }
 
     
-      if (typeof input["lname"] !== "undefined") {
+      if (typeof input["lastname"] !== "undefined") {
         const re = /^\S*$/;
-        if (!input["lname"]) {
+        if (!input["lastname"]) {
           isValid = false;
-          errors["lname"] = "Enter your Last Name.";
+          errors["lastname"] = "Enter your Last Name.";
         }
     
-        else if(input["lname"].length < 5 || !re.test(input["lname"])){
+        else if(input["lastname"].length < 5 || !re.test(input["lastname"])){
             isValid = false;
-            errors["lname"] = "Lastname should have atleast five characters and cannot contains numbers.";
+            errors["lastname"] = "Lastname should have atleast five characters and cannot contains numbers.";
         }
       }
   
@@ -137,31 +161,31 @@ class RegisterForm extends React.Component {
         <form className="register-form" onSubmit={this.handleSubmit}>
         <h1>Register to EPlanet</h1>
         <div className="logrow1">
-        <div className="logcol1"><label for="fname">First Name:</label></div>
+        <div className="logcol1"><label for="firstname">First Name:</label></div>
         <div className="logcol2">
             <input 
               type="text" 
-              name="fname" 
-              value={this.state.input.fname}
+              name="firstname" 
+              value={this.state.input.firstname}
               onChange={this.handleChange}
               placeholder="First Name" 
               id="firstname" />
         </div>
-        <div className="alert">{this.state.errors.fname}</div>
+        <div className="alert">{this.state.errors.firstname}</div>
         </div>
 
         <div className="logrow1">
-        <div className="logcol1"><label for="lname">Last Name:</label></div>
+        <div className="logcol1"><label for="lastname">Last Name:</label></div>
         <div className="logcol2">
           <input 
             type="text" 
-            name="lname" 
-            value={this.state.input.lname}
+            name="lastname" 
+            value={this.state.input.lastname}
             onChange={this.handleChange}
             placeholder="Last Name" 
             id="lastname" />
         </div>
-        <div className="alert">{this.state.errors.lname}</div>
+        <div className="alert">{this.state.errors.lastname}</div>
         </div>
   
         <div className="logrow1">

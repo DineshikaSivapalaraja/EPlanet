@@ -1,24 +1,37 @@
 .order {
-  width: 100%;
-  height: 100vh;
-  display: flex;
+ 
+  display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  background-color: #3f5657;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 2rem;
+ 
+}
+
+.order .topTable{
+  padding: 2rem;
+  
 }
   
 .order table {
-  border: 5px solid rgb(3, 61, 61);
   width: 1000px;
-  height: 400px;
-  margin: 10% 10% 10% 10%;
+  height: auto;
+  margin: 2rem auto;
   align-items: center;  
+  background-color: #012727;
+  padding: 30px;
+  border-radius: 2rem;
 }
+
+
 .head1,.head2{
-  font-size: 24px; 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px; 
   text-align: left;
-  margin: 10% 0% 0% 10%;
-  color:#67f3fa;
+  margin: 10px auto 20px;
+  color:#0cd8e3;
 }
 .head1{
   width:170%;
@@ -34,12 +47,13 @@
   text-align:center;
   font-size: 20px;
 }
-#d2{
+#d8{
   text-align:center;
+  
 }
 
 #d4{
-  text-align: center;
+  text-align: right;
 }
 #d5{
   text-align: center;
@@ -51,21 +65,20 @@
 
 
 .table1 {
-  border: 5px solid rgb(3, 61, 61);
+  border: 5px solid rgba(242, 242, 242, 0.491);
   width: 900px;
   height: 400px;
-  margin: 10% 10% 10% 10%;
   text-align: left;
   
 }
 
 .table2 {
-  border: 5px solid rgb(3, 61, 61);
+  border: 5px solid rgba(242, 242, 242, 0.491);
   width:1000px;
   height: 700px;
   text-align: left;
   align-content: center;
-  margin-left: 0%;
+ 
   
 }
 

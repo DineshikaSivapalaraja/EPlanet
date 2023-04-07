@@ -29,7 +29,7 @@ const SingleProduct =() => {
 
   const handleAddToCart = async()=>{
 
-    const cartId = 3;
+    const cartId = 13;
     const productQuantity = 1;
     const fetchData = async () => {
       try {

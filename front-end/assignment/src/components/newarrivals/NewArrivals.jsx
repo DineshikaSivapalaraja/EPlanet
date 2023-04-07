@@ -8,10 +8,12 @@ const NewArrivals = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-               const response = await fetch("http://localhost:8080/product/get-all?limit=6");
+               const response = await fetch("http://localhost:8080/product/get-all");
 
                 const data = await response.json();
-                setNewArrivalList(data);
+                setNewArrivalList(data.slice(0, 6));
+                console.log(newArrivalList);
+
                 console.log(data);
             } catch (error) {
                 console.error(error);

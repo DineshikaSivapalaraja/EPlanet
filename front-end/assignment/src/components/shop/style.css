@@ -81,7 +81,11 @@ transition: 0.5s;
 box-shadow: rgba(233, 235, 237, 0.418) 0px 4px 16px;
 }
 
-
+.image2{
+  width: 25%;
+  margin: 1.5rem 0.5rem 0;
+  border-radius: 1.2rem;
+}
 /*************Single product*******/
 
 .singleproduct{

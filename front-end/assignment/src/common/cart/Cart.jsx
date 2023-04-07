@@ -8,12 +8,18 @@ import axios from 'axios';
 const Cart = ({ addToCart, decreaseQty}) => {
     const userId = localStorage.getItem('userId');    
   const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice]  = useState(0)
+  const [cartId,setCartId] = useState(0);
 
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/cart/items?cartId=3'); // replace with your API endpoint
+        const response1 = await axios.get(`http://localhost:8080/cart/get?userId=${userId}`); // replace with your API endpoint
+        setCartId(response1.data.id);
+
+        const response = await axios.get(`http://localhost:8080/cart/items?cartId=${response1.data.id}`);
         setCartItems(response.data);
+        console.log(response);
       } catch (error) {
         console.log(error);
       }
@@ -21,8 +27,59 @@ const Cart = ({ addToCart, decreaseQty}) => {
 
     fetchCartItems();
   }, []);
+  useEffect(() => {
+    if(cartItems !== null){
+       setTotalPrice(cartItems.reduce((price, item) => price + item.quantity * item.product.price, 0));
+    }
+  }, [cartItems]);
 
-  const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.product.price, 0);
+
+  const deleteCartItem = async (cartId,productId) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:8080/cart/items/delete?cartId=${cartId}&itemId=${productId}`
+        );
+        console.log( `http://localhost:8080/cart/items/delete?cartId=${cartId}&itemId=${productId}`);
+      //return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+const handleDeleteClick = (cartId,productId) => {
+    if(window.confirm("Are you sure! Do you want to delete this item.")){
+      deleteItem(cartId,productId);
+      window.location.reload()
+    }
+  };
+
+
+  const deleteItem = async (cartId,productId) => {
+   
+      try {
+         
+            await deleteCartItem(cartId,productId);
+            
+
+          } catch (error) {
+            console.log(error);
+          }
+
+  };
+  console.log(cartId);
+
+  if(!cartItems){
+    return (
+        <>
+        <section className="cart-items">
+            <div className="container d_flex">
+                
+              <h2>Nothing to display</h2>
+            </div>
+        </section>
+    </> 
+    )
+  }
     return (
         <>
             <section className="cart-items">
@@ -45,7 +102,7 @@ const Cart = ({ addToCart, decreaseQty}) => {
                                 </div>
                                 <div className='cart-items-function'>
                                     <div className='removeCart'>
-                                        <button className='removeCart'>
+                                        <button className='removeCart' onClick={() =>handleDeleteClick(cartId,item.id)}>
                                             <i className='fa fa-times'></i>
                                         </button>
                                     </div>
