@@ -4,33 +4,24 @@ import {Link  , useLocation} from 'react-router-dom';
 import { useState, useEffect} from 'react';
 import axios from 'axios';
 
-const Shop2 = ({ productItems }) => {
-    const location = useLocation();
-  const searchTerm = new URLSearchParams(location.search).get("searchTerm");
-  //console.log(searchTerm);
-  const [searchResults, setSearchResults] = useState([]);
+const Shop3 = ({ productItems }) => {
 
-
+    const [productList, setProductList] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-            console.log(searchTerm);
             try {
-              const response = await axios.get(
-                `http://localhost:8080/product/search-name?name=${searchTerm}`
-              );
-              //console.log(`http://localhost:8080/product/search-name?name=${searchTerm}`);
-              setSearchResults(response.data);
-              console.log(searchResults);
-        
+                const response = await fetch("http://localhost:8080/product/get-all");
+                const data = await response.json();
+                setProductList(data);
+                console.log(data);
             } catch (error) {
-              console.error(error);
-            }   };    
+                console.error(error);
+            }
+        };
 
         fetchData();
     }, []);
-
-
 
 
     return (
@@ -41,11 +32,11 @@ const Shop2 = ({ productItems }) => {
                   <div className="contentWidth2">
                   <div className='heading d_flex'>
                     <div className='heading-left row  f_flex'>
-                        <h2 id="searchid">Search Results For : <span>{searchTerm}</span></h2>
+                        <h2 id="searchid"><span>All Products</span></h2>
                     </div>
                     </div>
                     <div className="serachressub grid3">
-                    {searchResults.map((productItem, index) => {
+                    {productList.map((productItem, index) => {
                       return(
                       <div className='box'>
                           <div className='product mtop'>
@@ -84,4 +75,4 @@ const Shop2 = ({ productItems }) => {
     )
 }
 
-export default Shop2
+export default Shop3

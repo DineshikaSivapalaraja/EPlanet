@@ -38,6 +38,12 @@
     display: flex;
 }
 
+.Checkout input[type="radio"]:checked {
+    color: rgb(83, 220, 83);
+  }
+  
+  
+
 .paymethod{
     margin: 0.5rem 2rem;
 }
@@ -62,6 +68,9 @@
     cursor: pointer;
     background: #a88a07;
 }
+
+
+
 
 /********card-payment********/
 .cardpay{
@@ -109,4 +118,8 @@
     width: 50%;
     
     
+}
+
+#cardbtn{
+    font-size: 15px;
 }

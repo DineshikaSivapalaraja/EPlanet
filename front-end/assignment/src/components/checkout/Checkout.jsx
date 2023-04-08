@@ -1,8 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Checkout.css"
+import { useState } from 'react';
+import { useHistory } from "react-router-dom";
 
 export default function Checkout() {
+
+    const [paymentMethod, setPaymentMethod] = useState("");
+    const history = useHistory();
+  
+    const handlePaymentChange = (e) => {
+      setPaymentMethod(e.target.value);
+    };
+  
+    const handleConfirmOrder = () => {
+      localStorage.setItem("paymentMethod", paymentMethod);      
+    };
+
   return (
     <>
         <div className="checkout">
@@ -81,15 +95,17 @@ export default function Checkout() {
             <div className="payment">
                 <h2>Payment method :</h2>
                 <div className="paymethod">
-                    <input type='radio' name='paymenttype' value="Cash"/>Cash on Delivery                    
+                    <input type='radio' name='paymenttype' id='cash' value="cash" checked={paymentMethod === "creditCard"}
+            onChange={handlePaymentChange}/>Cash on Delivery                    
                 </div>
                 <div className="paymethod">
-                   <input type='radio' name='paymenttype' value="debit"/>Card Payment
+                   <input type='radio' name='paymenttype' id='card' value="card" checked={paymentMethod === "creditCard"}
+            onChange={handlePaymentChange}/>Card Payment
                     
                 </div>
             </div>
             <div className="checkbtn">
-                <Link to="">Checkout</Link>
+                <Link to="/ordersummary" onClick={handleConfirmOrder}>Checkout</Link>
             </div>
             <div className="canclebtn">
                 <Link to="/">Cancel</Link>

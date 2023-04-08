@@ -1,5 +1,4 @@
 import React from "react"
-import Ndata from "./Ndata"
 import { Link } from "react-router-dom"
 
 const Cart = ({newArrivalList}) => {

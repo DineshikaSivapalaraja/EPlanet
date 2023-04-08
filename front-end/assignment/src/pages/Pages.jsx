@@ -17,8 +17,13 @@ const Pages = ({ cartItem, addToCart, shopItems}) => {
             try {
                 const response = await fetch("http://localhost:8080/product/get-all");
                 const data = await response.json();
-                setProductList(data);
+                setProductList(data.slice(0, 9));
                 console.log(data);
+
+              
+                
+              
+
             } catch (error) {
                 console.error(error);
             }

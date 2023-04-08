@@ -1,5 +1,6 @@
 import React from 'react'
 import "../checkout/Checkout.css"
+import { Link } from 'react-router-dom'
 
 export default function Cardpay() {
   return (
@@ -47,7 +48,7 @@ export default function Cardpay() {
                 </div>
             </div>
             <div class="logbutton">
-                <input type="submit" value="Confirm Payment" name="confirmpayment"/>
+                <Link to='/orderconfirm'><input type="submit" value="Confirm Payment" name="confirmpayment" id='cardbtn'/></Link>
             </div>
             </form>
          </div>

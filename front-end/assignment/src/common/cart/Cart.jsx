@@ -127,7 +127,7 @@ const handleDeleteClick = (cartId,productId) => {
                         <h3>Rs. {totalPrice}.00</h3>
                         </div>
                         <div className="proceedcheck">
-                            <Link to="/ordersummary" className="procheck">Proceed to Checkout</Link>
+                            <Link to="/checkout" className="procheck">Proceed to Checkout</Link>
                         </div>
                         <div className="proceedcheck">
                             <Link to="/" className="contshhop">Continue Shopping</Link>

@@ -1,12 +1,29 @@
 import './Order.css';
 import {Link} from 'react-router-dom';
-
+import { useEffect, useState } from "react";
 
 
   
-function Order() {
+function Order(props) {
+ 
+
+  const [paymentMethod, setPaymentMethod] = useState("");
+
+  useEffect(() => {
+    const paymentMethod = localStorage.getItem("paymentMethod");
+    setPaymentMethod(paymentMethod);
+  }, []);
+
+  const handleConfirmOrder = () => {
+    if(paymentMethod === 'card'){
+      window.location.href='/cardpay';
+    }else{
+      window.location.href='/orderconfirm';
+    }
+  }
+
   return (
-    // <div>
+   
     <div className="order">
       <div className="topTable">
       
@@ -94,7 +111,8 @@ function Order() {
      </div>
 
      <div className="proceedcheck">
-          <Link to="/checkout" className="procheck">Proceed to Checkout</Link>
+      <button onClick={handleConfirmOrder} className="procheck">Confirm order</button>
+          {/* <Link to="/cardpay" className="procheck">Confirm Order</Link> */}
      </div>
      <div className="proceedcheck">
         <Link to="/" className="contshhop">Continue Shopping</Link>
