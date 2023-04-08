@@ -46,6 +46,7 @@ import axios from 'axios';
 export const OTPInput = () => {
 const inputs = document.querySelectorAll("input"),
       button = document.querySelector("button");
+      const email = localStorage.getItem('email')
 
     
 inputs.forEach((input,index1) => { 
@@ -82,15 +83,17 @@ inputs.forEach((input,index1) => {
 });
 
 const handleSubmit = async (e) => {
-      console.log(inputs);
+    //
+     
       e.preventDefault();
-      const email = localStorage.getItem('email');
-      const otp = Array.from(document.querySelectorAll("input"))
+           const otp = Array.from(document.querySelectorAll("input"))
                     .reduce((acc, input) => acc + input.value, '');
+         console.log(email,otp);
       try {
-        const response = await axios.post(`http://localhost:8080/auth/verify?email=${email}&otp=${otp}`);
+        const response = await axios.get(`http://localhost:8080/auth/verify?email=${email}&otp=${otp}`);
         console.log(response);
-        window.location.href="/"
+        localStorage.removeItem('email');
+        window.location.href="/login"
       } catch (error) {
         console.log(error);
       }

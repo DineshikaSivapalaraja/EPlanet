@@ -12,7 +12,8 @@ const NewArrivals = () => {
                const response = await fetch("http://localhost:8080/product/get-all");
 
                 const data = await response.json();
-                setNewArrivalList(data.slice(0, 6));
+                const filteredData = data.filter(product => product.price > 300000);
+                setNewArrivalList(filteredData.slice(0, 6));
                 console.log(newArrivalList);
 
                 console.log(data);

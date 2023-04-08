@@ -6,31 +6,31 @@ import axios from 'axios';
 
 const Shop2 = ({ productItems }) => {
     const location = useLocation();
-  const searchTerm = new URLSearchParams(location.search).get("searchTerm");
-  //console.log(searchTerm);
-  const [searchResults, setSearchResults] = useState([]);
 
 
-
-    useEffect(() => {
-        const fetchData = async () => {
-            console.log(searchTerm);
-            try {
-              const response = await axios.get(
-                `http://localhost:8080/product/search-name?name=${searchTerm}`
-              );
-              //console.log(`http://localhost:8080/product/search-name?name=${searchTerm}`);
-              setSearchResults(response.data);
-              console.log(searchResults);
-        
-            } catch (error) {
-              console.error(error);
-            }   };    
-
-        fetchData();
-    }, []);
-
+    const categoryTerm = new URLSearchParams(location.search).get("categoryTerm");
+    const [categoryResults, setCategoryResults] = useState([]);
     
+    useEffect(() => {
+      const fetchData = async () => {
+          console.log(categoryTerm);
+          try {
+            const response2 = await axios.get(
+              `http://localhost:8080/product/search-category?category=${categoryTerm}`
+            );
+            //console.log(`http://localhost:8080/product/search-name?name=${searchTerm}`);
+            setCategoryResults(response2.data);
+            console.log(categoryResults);
+      
+          } catch (error) {
+            console.error(error);
+          }   };    
+
+      fetchData();
+  }, []);
+
+
+
     return (
         <>
       
@@ -39,16 +39,16 @@ const Shop2 = ({ productItems }) => {
                   <div className="contentWidth2">
                   <div className='heading d_flex'>
                     <div className='heading-left row  f_flex'>
-                        <h2 id="searchid">Search Results For : <span>{searchTerm}</span></h2>
+                        <h2 id="searchid">Search Results For : <span>{categoryTerm}</span></h2>
                     </div>
                     </div>
                     <div className="serachressub grid3">
-                    {searchResults.map((productItem, index) => {
+                    {categoryResults.map((productItem, index) => {
                       return(
                       <div className='box'>
                           <div className='product mtop'>
                               <div className='img' width="40px">
-                                
+                                  {/* <span className='discount'>{shopItems.discount}% Off</span> */}
                                   <Link to={`/singleproduct?productId=${productItem.id}`}><img src={productItem.image_url} alt='' className="shopProImg"/></Link> 
                               </div>
                               <div className='product-details'>

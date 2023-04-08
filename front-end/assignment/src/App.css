@@ -90,8 +90,8 @@ input, button {
 .category {
   width: 22%;
   box-shadow: rgba(193, 194, 194, 0.377) 0 4px 16px;
-  height: 30rem;
-  padding: 1rem 3rem;
+  height: 28rem;
+  padding: 2.4rem 3rem;
   border-radius: 2rem;
   
 }
@@ -99,7 +99,7 @@ input, button {
 .category i {
   width: 30px;
   height: 30px;
-  margin-top: 13px;
+  margin-top: 15px;
   object-fit: contain;
 }
 .category span {

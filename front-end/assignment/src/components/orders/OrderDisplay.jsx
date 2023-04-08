@@ -56,7 +56,7 @@ function Order(props) {
 
      <div className="bottomTable">
       <table  className="table2">
-      <h3 className="head2">Shipped Products</h3>
+      <h3 className="head2">Delivery Products</h3>
         <tr>
           <th colspan="2" className="orhead2">Product</th>
           <th className="orhead2" >Quantity</th>

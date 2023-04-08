@@ -66,6 +66,7 @@ class LoginForm extends React.Component {
 
     
         const fetchData = async () => {
+          if(localStorage.getItem('userId')){
           try {
             const response = await axios.post(`http://localhost:8080/cart/create/${localStorage.getItem('userId')}`);
   
@@ -76,6 +77,7 @@ class LoginForm extends React.Component {
             console.log(error);
            
           }
+        }
         };
         fetchData();
     }

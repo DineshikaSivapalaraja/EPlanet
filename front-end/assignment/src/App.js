@@ -2,7 +2,6 @@ import './App.css';
 import Header from './common/header/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Pages from './pages/Pages';
-
 import Orders from './components/orders/OrderDisplay';
 import { useState } from 'react';
 import Cart from "./common/cart/Cart"
@@ -18,6 +17,7 @@ import Cardpay from './components/cardpay/Cardpay';
 import Singleproduct from './components/singleproduct/SingleProduct';
 import Shop2 from './components/shop/Shop2';
 import AllProducts from './components/shop/Shop3';
+import ShopByCat from './components/shop/ShopByCat';
 
 function App() {
   // Step1 : Fetch data from Database
@@ -64,6 +64,7 @@ const decreaseQty = (product) => {
           <Route path="/singleproduct" exact><Singleproduct/></Route>
           <Route path="/ordersummary" exact><Orders/></Route>
           <Route path="/products" exact><Shop2/></Route>
+          <Route path="/category" exact><ShopByCat/></Route>
           <Route path="/shop" exact><AllProducts/></Route>
           <Route path="/otp" exact><OTP/></Route>
           <Route path="/orderconfirm" exact><OrderConfirm/></Route>
