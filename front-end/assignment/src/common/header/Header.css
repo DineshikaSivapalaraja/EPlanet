@@ -38,6 +38,11 @@
     border-radius: 10rem;
 }
 
+.search-box button{
+    background: none;
+    color: #ffffffb7;
+}
+
 .search-box i{
     width: 5%;
     text-align: center;
@@ -52,6 +57,7 @@
     width: 100%;
     padding: 10px;
     background-color: #334344a1;
+    color: #fff;
 }
 
 ::placeholder {
@@ -106,7 +112,10 @@
    
 }
 /*----------------Search---------------------*/
-
+#usernm{
+    color: #69f3f8;
+    font-size: 20px;
+}
 
 .categories {
     background-color: #3f5657;

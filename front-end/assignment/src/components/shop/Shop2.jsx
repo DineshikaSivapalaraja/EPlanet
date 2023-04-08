@@ -36,36 +36,51 @@ const Shop2 = ({ productItems }) => {
 
     return (
         <>
-        {searchResults.map((productItem, index) => {
-          return (
-            <div className='box'>
-              <div className='product mtop'>
-                <div className='img' width="40px">
-                  {/* <span className='discount'>{shopItems.discount}% Off</span> */}
-                  <Link to={`/singleproduct?productId=${productItem.id}`}><img src={productItem.image_url} alt='' className="image2"/></Link>
-                  
+      
+            <div className="searchresultcont background">
+                <div className="container d_flex">
+                  <div className="contentWidth2">
+                  <div className='heading d_flex'>
+                    <div className='heading-left row  f_flex'>
+                        <h2 id="searchid">Search Results For : <span>{searchTerm}</span></h2>
+                    </div>
+                    </div>
+                    <div className="serachressub grid3">
+                    {searchResults.map((productItem, index) => {
+                      return(
+                      <div className='box'>
+                          <div className='product mtop'>
+                              <div className='img' width="40px">
+                                  {/* <span className='discount'>{shopItems.discount}% Off</span> */}
+                                  <Link to={`/singleproduct?productId=${productItem.id}`}><img src={productItem.image_url} alt='' className="shopProImg"/></Link> 
+                              </div>
+                              <div className='product-details'>
+                                  <h3>{productItem.name}</h3>
+                                  <div className='rate'>
+                                      <i className='fa fa-star'></i>
+                                      <i className='fa fa-star'></i>
+                                      <i className='fa fa-star'></i>
+                                      <i className='fa fa-star'></i>
+                                      <i className='fa fa-star'></i>
+                                  </div>
+                                  <div className='price'>
+                                      <h4>Rs. {productItem.price}.00 </h4>
+                                    
+                                      <button>
+                                        <i className='fa fa-plus'></i>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                         )
+                        })}
+                      </div>
+                    </div>
                 </div>
-                <div className='product-details'>
-                  <h3>{productItem.name}</h3>
-                  <div className='rate'>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                  </div>
-                  <div className='price'>
-                    <h4>Rs. {productItem.price}.00 </h4>
-                  
-                    <button>
-                      <i className='fa fa-plus'></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
-          )
-        })}
+            
+         
       </>
     )
 }

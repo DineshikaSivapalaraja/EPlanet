@@ -89,3 +89,24 @@
 .cardpaylable{
     margin-bottom: 10px;
 }
+
+
+/********confirmation********/
+
+.confirmbox{
+    border: 3px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+
+.confirmbox h3{
+   margin-bottom: 10px;
+}
+#confirmid{
+    margin: 40px auto;
+    padding: 20px;
+    width: 50%;
+    
+    
+}

@@ -31,7 +31,7 @@ export default function About() {
             <h1 class="revhead">Client's Reviews</h1>
             <div className="reviews">
                 <div className="rev">
-                <img src="./images/new.png" alt=""/>
+                <img src="./images/avertarev.png" alt=""/>
                 <div className="revcont">
                     <p>" I recently had some electrical work done at EPlanet and was blown away by the 
                     level of service and expertise I received. The team was knowledgeable, professional, 
@@ -49,7 +49,7 @@ export default function About() {
                 
                 </div>
                 <div className="rev">
-                <img src="./images/new.png" alt=""/>
+                <img src="./images/ava.jpg" alt=""/>
                 <div className="revcont">
                     <p>" I was hesitant to have any electrical work done in my home, but EPlanet put my mind at 
                     ease with their professionalism and expertise. They explained the process clearly and 
@@ -67,7 +67,7 @@ export default function About() {
                 
                 </div>
                 <div className="rev">
-                <img src="./images/new.png" alt=""/>
+                <img src="./images/avertarev.png" alt=""/>
                 <div className="revcont">
                     <p>" I've been a loyal customer of EPlanet for years and have always been impressed by the 
                     quality of service and products they offer. The staff is friendly and helpful, 
@@ -85,7 +85,7 @@ export default function About() {
                 
                 </div>
                 <div className="rev">
-                <img src="./images/new.png" alt=""/>
+                <img src="./images/ava.jpg" alt=""/>
                 <div className="revcont">
                      <p>" I was hesitant to have any electrical work done in my home, but EPlanet put my mind at 
                     ease with their professionalism and expertise. They explained the process clearly and 
@@ -103,7 +103,7 @@ export default function About() {
                
                 </div>
                 <div className="rev">
-                <img src="./images/new.png" alt=""/>
+                <img src="./images/avertarev.png" alt=""/>
                 <div className="revcont">
                     <p>" I had a great experience at EPlanet. The technician was prompt, courteous, and efficient. 
                     They completed the work on time and within budget, and I was very happy with the end result. 
@@ -120,7 +120,7 @@ export default function About() {
                 
                 </div>
                 <div className="rev">
-                <img src="./images/new.png" alt=""/>
+                <img src="./images/ava.jpg" alt=""/>
                 <div className="revcont">
                     <p>" I recently had the pleasure of working with the team at EPlanet for an electrical project in my home,
                      and I couldn't be happier with the results. From the moment I walked into the shop, I was greeted 

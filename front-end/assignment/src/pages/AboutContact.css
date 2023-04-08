@@ -65,9 +65,11 @@
 }
 
 .rev img{
-    width: 20%;
-    height: 20%;
+    width: 10%;
+    height: 10%;
     margin: 2rem;
+    border-radius: 50%;
+    opacity: 0.8;
 }
 
 .revcont{
@@ -81,7 +83,10 @@
     padding: 2rem 4rem 2rem 2rem;
 }
 
-.revcont .stars, h3{
+.revcont .stars{
+    padding-left: 2rem;
+}
+.revcont h3{
     padding-left: 2rem;
 }
 

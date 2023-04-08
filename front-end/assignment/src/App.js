@@ -14,6 +14,7 @@ import Login from './pages/user/Login1';
 import Register from './pages/user/Register';
 import OTP from './pages/user/OtpVerifyPage';
 import Checkout from './components/checkout/Checkout';
+import OrderConfirm from './components/checkout/Confirm';
 import Cardpay from './components/cardpay/Cardpay';
 import Singleproduct from './components/singleproduct/SingleProduct';
 import Shop2 from './components/shop/Shop2';
@@ -69,6 +70,7 @@ const decreaseQty = (product) => {
           <Route path="/ordersummary" exact><Orders/></Route>
           <Route path="/products" exact><Shop2/></Route>
           <Route path="/otp" exact><OTP/></Route>
+          <Route path="/orderconfirm" exact><OrderConfirm/></Route>
 
         </Switch>
         <Footer/>

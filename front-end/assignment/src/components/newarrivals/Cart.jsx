@@ -1,5 +1,6 @@
 import React from "react"
 import Ndata from "./Ndata"
+import { Link } from "react-router-dom"
 
 const Cart = ({newArrivalList}) => {
   return (
@@ -9,7 +10,7 @@ const Cart = ({newArrivalList}) => {
           return (
             <div className='box' key={index}>
               <div className='img'>
-                <img src={val.image_url} alt='' />
+              <Link to={`/singleproduct?productId=${val.id}`}><img src={val.image_url} alt='' /></Link>
               </div>
               <h4>{val.name}</h4>
               <span>Rs. {val.price}</span>

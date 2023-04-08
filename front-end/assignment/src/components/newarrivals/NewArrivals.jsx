@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Cart from "./Cart"
 import "./style.css"
 
+
 const NewArrivals = () => {
      const [newArrivalList, setNewArrivalList] = useState([]);
 
@@ -32,10 +33,7 @@ const NewArrivals = () => {
                     <img src='./images/new.png' className="newbtn" />
                     <h2>New Arrivals </h2>
                     </div>
-                    <div className='heading-right row '>
-                    <span>View all</span>
-                    <i className='fa fa-caret-right'></i>
-                    </div>
+                   
                 </div>
 
             <Cart newArrivalList={newArrivalList}/>

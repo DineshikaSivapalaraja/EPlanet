@@ -146,3 +146,34 @@ box-shadow: rgba(233, 235, 237, 0.418) 0px 4px 16px;
   font-size: 15px;
   width: 15rem;
 }
+
+
+/********search results**********/
+
+/* .searchresultcont{
+  background-color: bisque;
+} */
+
+/* .serachressub{
+  background-color: blue;
+} */
+
+.serachresbox{
+  background-color: aquamarine;
+  display: flex;
+  width: 100%;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  }
+
+  #searchid{
+    margin-bottom: 25px;
+  }
+
+  #searchid span{
+    color: rgb(241, 241, 144);
+  }

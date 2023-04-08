@@ -15,10 +15,7 @@ const Shop = ({ addToCart, productItems }) => {
                     <div className='heading-left row  f_flex'>
                         <h2>Electric Items</h2>
                     </div>
-                    <div className='heading-right row '>
-                        <span>View all</span>
-                        <i className='fa fa-caret-right'></i>
-                    </div>
+                   
                     </div>
                     <div className='product-content  grid1'>
                     <ShopCart addToCart={addToCart} productItems={productItems} />
