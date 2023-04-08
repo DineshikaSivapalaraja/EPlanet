@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import './Login1.css'
-// import { useState } from 'react';
+
 import axios from 'axios';
 
   
@@ -51,7 +51,7 @@ class LoginForm extends React.Component {
         console.log(localStorage.getItem('userId'));
        
         window.location.href="/"
-        // this.props.history.push('/');
+      
 
      
       })
